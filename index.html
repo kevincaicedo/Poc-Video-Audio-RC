@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'">
-    <link href="./styles.css" rel="stylesheet">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8" />
+  <title>Simple Screen Recorder</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="index.css" />
+  <script defer src="./renderer.js"></script>
+</head>
+
+<body class="content">
+  <h1>⚡ Electron Screen Recorder</h1>
+
+  <video></video>
+  <!-- <audio></audio> -->
+
+  <button id="startBtn" class="button is-primary">Start</button>
+  <button id="stopBtn" class="button is-warning">Stop</button>
+  <button id="deepSpeech" class="button is-warning">DeepSpeech</button>
+
+  <hr />
+
+  <button id="videoSelectBtn" class="button is-text">
+    Choose a Video Source
+  </button>
+</body>
+
 </html>
